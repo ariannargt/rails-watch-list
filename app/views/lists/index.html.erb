@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render 'shared/banner' %>
+
+
+<div class="container">
+<h1>Lists</h1>
+</div>
+
+<div class="cards">
+  <% @lists.each do |list| %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://th.bing.com/th/id/OIP.ZxuF58l5GS2zPHuov7n93wHaE7?rs=1&pid=ImgDetMain)">
+    <%= list.name %>
+     </div>
+    <% end %>
+</div>

@@ -3,6 +3,3 @@ import "@hotwired/turbo-rails"
 import "controllers"
 import "bootstrap"
 import "@popperjs/core"
-// app/assets/config/manifest.js
-//= link popper.js
-//= link bootstrap.min.js
