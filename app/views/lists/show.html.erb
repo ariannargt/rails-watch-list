@@ -1,4 +1,4 @@
-<h1><%= @list.name %></h1>
+<%= render 'shared/banner' %>
 <div id="lists">
   <div class="row">
   <% @list.bookmarks.each do |bookmark| %>
@@ -14,6 +14,5 @@
   <% end %>
   </div>
 </div>
-<%= link_to "Bookmark a movie->", new_list_bookmark_path(@list) %>
 <hr>
-<%= link_to "<-Back", lists_path %>
+  <%= link_to "Bookmark a movie->", new_list_bookmark_path(@list), class:"btn-flat text-decoration-none" %>

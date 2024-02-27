@@ -1,6 +1,6 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://pipewrenchmag.com/wp-content/uploads/2022/01/Darkened-Movie-Theater-scaled.jpg);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= url_for @banner_url %>);">
   <div class="container">
-    <h1>Save any kind of movie</h1>
+    <h1><%= @banner_text %></h1>
   </div>
 
 </div>

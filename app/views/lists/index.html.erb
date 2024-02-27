@@ -3,14 +3,22 @@
 <%= render 'shared/banner' %>
 
 
-<div class="container">
-<h1>Lists</h1>
+<div class="container m-3">
+<h3>My Lists</h3>
 </div>
 
 <div class="cards">
   <% @lists.each do |list| %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://th.bing.com/th/id/OIP.ZxuF58l5GS2zPHuov7n93wHaE7?rs=1&pid=ImgDetMain)">
-    <%= list.name %>
-     </div>
+    <% if list.photo.attached? %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+          url('<%= url_for list.photo %>')">
+        <%= link_to "#{list.name}", list_path(list), class:"text-decoration-none text-white" %>
+      </div>
+    <% else %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+          url('<%= url_for @default_url %>')">
+        <%= link_to "#{list.name}", list_path(list), class:"text-decoration-none text-white"%>
+      </div>
     <% end %>
+  <% end %>
 </div>
